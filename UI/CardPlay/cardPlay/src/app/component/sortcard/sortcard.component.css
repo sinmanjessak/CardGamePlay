@@ -1,0 +1,153 @@
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Title */
+.game-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f9d423;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+/* Input Section */
+.input-section {
+  margin-bottom: 20px;
+}
+
+.card-input {
+  width: 70%;
+  padding: 12px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 2px solid #f9d423;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-input::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+/* Sort Button */
+.button-section {
+  margin: 20px 0;
+}
+
+.sort-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.sort-btn:hover {
+  background: linear-gradient(135deg, #ff4e50 0%, #f9d423 100%);
+  transform: translateY(-3px);
+}
+
+.sort-btn:active {
+  background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  font-size: 2rem;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-rank {
+  font-size: 1.5rem;
+}
+
+.card-suit {
+  font-size: 2.5rem;
+}
+
+/* Dynamic color for suits */
+.card.red {
+  color: #e74c3c;
+}
+
+.card.black {
+  color: #2ecc71;
+}
+
+/* Error message */
+.error-message {
+  color: #e74c3c;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Error Section for Invalid Cards */
+.error-section {
+  margin-top: 20px;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.invalid-card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.invalid-card {
+  padding: 10px;
+  border: 1px solid #e74c3c;
+  border-radius: 5px;
+  background-color: #ffe6e6;
+  color: #e74c3c;
+  font-size: 1rem;
+  margin-top: 10px;
+}

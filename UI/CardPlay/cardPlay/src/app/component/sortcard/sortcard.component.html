@@ -1,0 +1,31 @@
+<div class="container">
+  <h1 class="game-title">Card Sorting Game</h1>
+
+  <!-- Input Field for Cards -->
+  <div class="input-section">
+    <input type="text" [(ngModel)]="inputCards" placeholder="Enter cards (e.g., 3C, JS, 2D)" class="card-input" />
+  </div>
+
+  <!-- Sort Button -->
+  <div class="button-section">
+    <button (click)="sortCards()" class="sort-btn">Sort Cards</button>
+  </div>
+
+  <!-- Displaying the valid sorted cards -->
+  <div class="card-container">
+    <div *ngFor="let card of cards" class="card" [ngClass]="cardClass(card)">
+      <span class="card-rank">{{ getCardRank(card) }}</span>
+      <span class="card-suit">{{ getCardSuit(card) }}</span>
+    </div>
+  </div>
+
+  <!-- Error message and invalid cards section -->
+  <div *ngIf="invalidCards.length > 0" class="error-section">
+    <p class="error-message">{{ errorMessage }}</p>
+    <div class="invalid-card-container">
+      <div *ngFor="let invalidCard of invalidCards" class="invalid-card">
+        {{ invalidCard }}
+      </div>
+    </div>
+  </div>
+</div>
